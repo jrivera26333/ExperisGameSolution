@@ -22,6 +22,4 @@ void UHealthComponent::SetCurrentHealth(float TargetHealth)
 		if (OnCharacterDeath.IsBound())
 			OnCharacterDeath.Broadcast();
 	}
-
-	UE_LOG(LogTemp, Warning, TEXT("Current Health: %f"), TargetHealth);
 }
