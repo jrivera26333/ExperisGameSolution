@@ -28,8 +28,6 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnDeathAction OnCharacterDeath;
 
-	//void SetCurrentHealth(float TargetHealth) { CurrentHealth = TargetHealth; }
-
 	void SetCurrentHealth(float TargetHealth);
 
 private:
