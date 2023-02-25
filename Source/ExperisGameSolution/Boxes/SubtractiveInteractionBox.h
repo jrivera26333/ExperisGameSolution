@@ -17,6 +17,9 @@ class EXPERISGAMESOLUTION_API ASubtractiveInteractionBox : public AInteractionBo
 public:	
 	virtual void OnApplyHealthUpdate_Implementation(class UHealthComponent* PlayerHealth) override;
 
+	UFUNCTION(BlueprintCallable)
+	float GetDamageToApply() const { return Damage; }
+
 private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true), Category = "Damage")
 	float Damage = 5.f;

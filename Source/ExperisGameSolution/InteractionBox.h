@@ -16,15 +16,6 @@ class EXPERISGAMESOLUTION_API AInteractionBox : public ATriggerBox, public IBoxE
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable)
 	virtual void OnApplyHealthUpdate_Implementation(class UHealthComponent* PlayerHealth) override {};
-
-private:
-
-	virtual void BeginPlay() override;
-
-	UPROPERTY()
-	class UBoxComponent* BoxCollision;
-
-	UFUNCTION()
-	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };

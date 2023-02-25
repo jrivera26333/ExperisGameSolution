@@ -17,6 +17,9 @@ class EXPERISGAMESOLUTION_API AAdditivePercentInteractionBox : public AInteracti
 public:
 	virtual void OnApplyHealthUpdate_Implementation(class UHealthComponent* PlayerHealth) override;
 
+	UFUNCTION(BlueprintCallable)
+	float GetHealthPercentIncrease() const { return HealthPercentIncrease / 100.f; }
+
 private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true), Category = "Damage")
 	float HealthPercentIncrease = 33.f;

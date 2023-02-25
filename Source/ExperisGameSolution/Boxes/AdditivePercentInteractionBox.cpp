@@ -10,6 +10,6 @@ void AAdditivePercentInteractionBox::OnApplyHealthUpdate_Implementation(UHealthC
 	{
 		float CurrentHealth = PlayerHealth->GetCurrentHealth();
 		float AddedHealth = (PlayerHealth->GetMaxHealth() * (HealthPercentIncrease / 100.f));
-		PlayerHealth->SetCurrentHealth(CurrentHealth += (PlayerHealth->GetMaxHealth() * (HealthPercentIncrease / 100.f)));
+		PlayerHealth->SetCurrentHealth(CurrentHealth + AddedHealth);
 	}
 }

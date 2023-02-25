@@ -2,6 +2,7 @@
 
 
 #include "HealthComponent.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
@@ -15,7 +16,7 @@ UHealthComponent::UHealthComponent()
 
 void UHealthComponent::SetCurrentHealth(float TargetHealth)
 {
-	CurrentHealth = TargetHealth;
+	CurrentHealth = FMath::Clamp<float>(TargetHealth, 0.0f, MaxHealth);
 
 	if (CurrentHealth <= 0.f)
 	{
