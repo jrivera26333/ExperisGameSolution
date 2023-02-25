@@ -13,20 +13,4 @@ UCLASS()
 class EXPERISGAMESOLUTION_API AExperisTestPlayerCharacter : public AExperisGameSolutionCharacter
 {
 	GENERATED_BODY()
-	
-
-private:
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true), Category = "Player Stats")
-	float MaxHealth = 20.f;
-
-	float CurrentHealth;
-
-public:
-
-	UFUNCTION(BlueprintCallable)
-	float GetMaxHealth() const { return MaxHealth; }
-
-	UFUNCTION(BlueprintCallable)
-	float GetCurrentHealth() const { return CurrentHealth; }
 };
